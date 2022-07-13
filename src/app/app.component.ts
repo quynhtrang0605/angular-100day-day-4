@@ -7,4 +7,10 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Angular ' + VERSION.major;
+  show = false;
+
+  user = {
+    name: 'Trang',
+    age: 22
+  }
 }

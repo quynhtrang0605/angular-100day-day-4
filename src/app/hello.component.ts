@@ -7,4 +7,12 @@ import { Component, Input } from '@angular/core';
 })
 export class HelloComponent  {
   @Input() name: string;
+
+  ngOnInit() {
+    console.log('Hello init');
+  }
+
+  ngOnDestroy() {
+    console.log('Hello destroy');
+  }
 }

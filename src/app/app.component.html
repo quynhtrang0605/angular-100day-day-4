@@ -1,4 +1,30 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<!-- <hello *ngIf="user.age >= 18" [name]="user.name"></hello>
+
+<div *ngIf="user.age < 18">you are to young to see this content</div>
+
+<button (click)="user.age = user.age - 1">-</button>
+Age: {{ user.age }} <button (click)="user.age = user.age + 1">+</button> -->
+
+<!-- Cach 2 -->
+<!-- <hello *ngIf="user.age >= 18; else under18" [name]="user.name"></hello> -->
+<!-- dòng trên có thể viết lại đầy đủ như sau:  -->
+<!-- <ng-template [ngIf]="user.age >= 18" [ngIfElse]="under18">
+  <hello *ngIf="user.age >= 18; else under18" [name]="user.name"></hello> 
+</ng-template>
+
+<ng-template #under18>
+  <div>you are to young to see this content</div>
+</ng-template>
+
+<button (click)="user.age = user.age - 1">-</button>
+Age: {{ user.age }} <button (click)="user.age = user.age + 1">+</button> -->
+
+<!-- sử dụng hidden -->
+<hello [hidden]="user.age < 18" [name]="user.name"></hello>
+
+<ng-template #under18>
+  <div>you are to young to see this content</div>
+</ng-template>
+
+<button (click)="user.age = user.age - 1">-</button>
+Age: {{ user.age }} <button (click)="user.age = user.age + 1">+</button>
